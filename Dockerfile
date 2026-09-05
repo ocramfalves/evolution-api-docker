@@ -2,7 +2,7 @@ FROM node:18-alpine AS builder
 
 WORKDIR /evolution
 
-RUN apk add --no-libc6-compat git
+RUN apk update && apk add --no-cache git
 
 RUN git clone https://github.com/EvolutionAPI/evolution-api.git .
 
